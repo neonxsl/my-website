@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.heading {
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.heading h1 {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.heading h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    margin: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.experience {
+    margin: 120px 0;
+    padding: 60px 20px;
+}
+
+.experience h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+}
+
+.experience-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience-icons i {
+    font-size: 80px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0px rgba(0, 0, 0, 0));
+}
+
+.experience-icons i:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+.devicon-html5-plain {
+   color: #000000;
+}
+
+.devicon-html5-plain:hover {
+    color: #E34C26;
+}
+
+.devicon-css3-plain {
+   color: #000000;
+}
+
+.devicon-css3-plain:hover {
+    color: #005cc4;
+}
+
+.devicon-javascript-plain {
+   color: #000000;
+}
+
+.devicon-javascript-plain:hover {
+    color: #F7DF1E;
+}
+
+.devicon-typescript-plain {
+   color: #000000;
+}
+
+.devicon-typescript-plain:hover {
+    color: #3178C6;
+}
+
+.devicon-python-plain {
+   color: #000000;
+}
+
+.devicon-python-plain:hover {
+    color: #3776AB;
+}
+
+.devicon-java-plain {
+   color: #000000;
+}
+
+.devicon-java-plain:hover {
+    color: #007396;
+}
+
+.devicon-swift-plain {
+    color: #000000;
+}
+
+.devicon-swift-plain:hover {
+    color: #FA7343;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-name {
+    position: absolute;
+    bottom: -40px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+}
+
+.icon-wrapper:hover .lang-name {
+    opacity: 1;
+}
+
+.icon-wrapper .devicon-html5-plain:hover ~ .lang-name,
+.icon-wrapper:hover .lang-name {
+    color: #E34C26;
+}
+
+.icon-wrapper .devicon-css3-plain:hover ~ .lang-name {
+    color: #005cc4;
+}
+
+.icon-wrapper .devicon-javascript-plain:hover ~ .lang-name {
+    color: #F7DF1E;
+}
+
+.icon-wrapper .devicon-typescript-plain:hover ~ .lang-name {
+    color: #3178C6;
+}
+
+.icon-wrapper .devicon-python-plain:hover ~ .lang-name {
+    color: #3776AB;
+}
+
+.icon-wrapper .devicon-java-plain:hover ~ .lang-name {
+    color: #007396;
+}
+
+.icon-wrapper .devicon-swift-plain:hover ~ .lang-name {
+    color: #FA7343;
+}
