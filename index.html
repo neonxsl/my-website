@@ -11,47 +11,83 @@
   <body>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
       </ul>
     </nav>
-    <div class="heading">
+
+    <div class="heading" id="home">
         <h1>hi! my name is neonxsl</h1> 
         <h2>i'm a software engineer and web developer</h2>
         <h2><i data-lucide="map-pin" stroke-width="2.5" style="color: #000000; margin-right: 10px; vertical-align: middle;"></i>sydney, australia</h2>
     </div>
+
     <main>
         <section class="experience">
             <h2>familiar languages</h2>
             <div class="experience-icons">
                 <div class="icon-wrapper">
                     <i class="devicon-html5-plain"></i>
-                    <span class="lang-name">HTML</span>
+                    <span class="lang-name">html</span>
                 </div>
-                <div class="icon-wrapper"></div>
+                <div class="icon-wrapper">
                     <i class="devicon-css3-plain"></i>
-                    <span class="lang-name">CSS</span>
+                    <span class="lang-name">css</span>
                 </div>
                 <div class="icon-wrapper">
                     <i class="devicon-javascript-plain"></i>
-                    <span class="lang-name">JavaScript</span>
+                    <span class="lang-name">javascript</span>
                 </div>
                 <div class="icon-wrapper">
                     <i class="devicon-typescript-plain"></i>
-                    <span class="lang-name">TypeScript</span>
+                    <span class="lang-name">typescript</span>
                 </div>
                 <div class="icon-wrapper">
                     <i class="devicon-python-plain"></i>
-                    <span class="lang-name">Python</span>
+                    <span class="lang-name">python</span>
                 </div>
                 <div class="icon-wrapper">
                     <i class="devicon-java-plain"></i>
-                    <span class="lang-name">Java</span>
+                    <span class="lang-name">java</span>
                 </div>
                 <div class="icon-wrapper">
                     <i class="devicon-swift-plain"></i>
-                    <span class="lang-name">Swift</span>
+                    <span class="lang-name">swift</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>about me</h2>
+            <p>
+                i'm a software engineer and web developer based in sydney, australia.
+                i enjoy building clean, functional websites and tools, and i'm always
+                looking for new projects to learn from. when i'm not coding, i'm probably
+                exploring new tech, tinkering with side projects, or staring at the night sky.
+            </p>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2>projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <i data-lucide="rocket" stroke-width="2"></i>
+                    <h3>space tab</h3>
+                    <p>a nasa-powered new tab page with a daily astronomy background, google search, and theme switching.</p>
+                    <a href="https://space.neonxsl.dev" target="_blank">visit site</a>
+                </div>
+                <div class="project-card">
+                    <i data-lucide="gem" stroke-width="2"></i>
+                    <h3>sapphire</h3>
+                    <p>a grade tracker built for nsw students. track grades, upcoming exams and your sentral timetable, all in one place.</p>
+                    <a href="https://sapphire.neonxsl.dev" target="_blank">visit site</a>
+                </div>
+                <div class="project-card">
+                    <i data-lucide="box" stroke-width="2"></i>
+                    <h3>quartz</h3>
+                    <p>a paper plugin that allows for real time metrics monitoring for 1.21.11 minecraft servers!</p>
+                    <a href="https://github.com/neonxsl/quartz" target="_blank">visit github</a>
                 </div>
             </div>
         </section>
