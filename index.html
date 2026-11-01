@@ -3,30 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>neonxsl</title>
-    <meta name="description" content="neonxsl is a software engineer and web developer based in sydney, australia, building clean, fast websites, tools and small pieces of software.">
+    <meta name="description" content="neonxsl makes websites and small tools in sydney, australia. loom, echo, typo, space tab, sapphire and quartz.">
     <meta name="theme-color" content="#050507">
-    <meta property="og:title" content="neonxsl · software engineer &amp; web developer">
-    <meta property="og:description" content="software engineer and web developer based in sydney, australia.">
+    <meta property="og:title" content="neonxsl">
+    <meta property="og:description" content="websites and small tools, made in sydney.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://neonxsl.dev/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./style.css"> 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script>document.documentElement.classList.add('js');</script>
   </head>
   <body>
-    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+    <a class="skip" href="#projects">skip to projects</a>
 
-    <nav id="nav">
+    <nav id="nav" aria-label="main">
       <div class="nav-inner">
-        <a href="#home" class="logo" data-scroll-to>neonxsl<span class="logo-dot" aria-hidden="true"></span></a>
+        <a href="#home" class="logo">neonxsl</a>
         <ul>
-          <li><a href="#about" data-scroll-to>about</a></li>
-          <li><a href="#toolkit" data-scroll-to>toolkit</a></li>
-          <li><a href="#projects" data-scroll-to>projects</a></li>
-          <li><a href="#contact" data-scroll-to>contact</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#toolkit">toolkit</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </div>
     </nav>
@@ -35,422 +36,300 @@
       <canvas id="sky" aria-hidden="true"></canvas>
       <div class="moon" aria-hidden="true"></div>
 
-      <div class="hero-content">
-        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>sydney, australia</p>
-        <h1 class="hero-title">
-          <span class="w"><span>hi,</span></span>
-          <span class="w"><span>i'm</span></span>
-          <span class="w"><span>neonxsl<span class="accent">.</span></span></span>
-        </h1>
-        <p class="hero-sub">
-          software engineer and web developer. i build clean, fast websites and small
-          tools that do one thing properly, and when i'm not doing that i'm usually
-          somewhere outside looking up.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects" data-scroll-to>view projects</a>
-          <a class="btn" href="#contact" data-scroll-to>get in touch</a>
+      <div class="hero-inner">
+        <div class="title-block">
+          <h1 class="hero-title">neonxsl</h1>
+          <p class="hero-sub">
+            i make websites and small tools in sydney. mostly things i wanted to exist,
+            and a few that other people use now too.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">see what i've made</a>
+            <a class="btn" href="mailto:neon@neonxsl.dev">neon@neonxsl.dev</a>
+          </div>
         </div>
-      </div>
 
-      <a class="scroll-cue" href="#about" data-scroll-to aria-label="scroll to about">
-        <span class="scroll-label">scroll</span>
-        <span class="scroll-line" aria-hidden="true"></span>
-      </a>
+        <p class="legend">
+          <span>crux, the pointers and the coalsack, roughly as they sit over sydney</span>
+          <span class="legend-time">sydney <time id="syd-time">--:--</time></span>
+          <span class="legend-moon" id="moon-phase"></span>
+        </p>
+      </div>
     </header>
 
     <main>
-      <div class="divider" aria-hidden="true"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
+      <!-- ==================== projects ==================== -->
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="hscroll" id="hscroll">
+          <div class="hscroll-pin">
+            <div class="container">
+              <div class="section-head">
+                <h2 id="projects-title">stuff i've made</h2>
+                <p class="section-intro">
+                  six things i've built and still look after. they all started as something i
+                  wanted for myself, which is probably why they actually got finished.
+                </p>
+              </div>
+            </div>
+
+            <div class="track-wrap" id="track-wrap">
+              <ol class="track glow-group" id="track">
+                <li class="card glow" data-p="loom">
+                  <span class="status">live</span>
+                  <h3>loom</h3>
+                  <p>a past paper library for nsw students. over 7,000 papers from more than 100 schools, sorted by school, year and course, with search across all of it and a pdf viewer right in the page, so you never end up with forty downloads named "trial_final(2).pdf".</p>
+                  <details class="more">
+                    <summary>more</summary>
+                    <p>most of it is maths, because that's where the demand is, but english, chemistry, physics, biology, economics and more are in there too. the whole catalogue ships as one static index, so search is instant and there's no server to fall over the week before trials.</p>
+                  </details>
+                  <div class="card-foot">
+                    <span class="stack">javascript · pdf.js · static site</span>
+                    <a class="card-link" href="https://loom.neonxsl.dev" target="_blank" rel="noopener">loom.neonxsl.dev<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+                  </div>
+                </li>
+                <li class="card glow" data-p="echo">
+                  <span class="status">live</span>
+                  <h3>echo</h3>
+                  <p>a local music player in the browser, built entirely around the keyboard. point it at a folder and it plays mp3, aac, flac and alac, with vim-style navigation, search, shuffle and synced lyrics. the tab key is banned.</p>
+                  <details class="more">
+                    <summary>more</summary>
+                    <p>chromium can't play apple lossless, so echo decodes alac to wav on the fly without losing quality. folder access and track metadata get cached in indexeddb so it isn't re-parsing your whole library every launch, and the glow around the album art follows the bass on an exponential curve so it moves smoothly instead of flickering.</p>
+                  </details>
+                  <div class="card-foot">
+                    <span class="stack">javascript · web audio · indexeddb</span>
+                    <a class="card-link" href="https://echo.neonxsl.dev" target="_blank" rel="noopener">echo.neonxsl.dev<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+                  </div>
+                </li>
+                <li class="card glow" data-p="typo">
+                  <span class="status">live</span>
+                  <h3>typo</h3>
+                  <p>a minimal typing test you can only drive with the keyboard. xp and levels, daily streaks, live wpm graphs, and leaderboards for every gamemode so you can see exactly where you rank against your friends.</p>
+                  <details class="more">
+                    <summary>more</summary>
+                    <p>six spoken languages, tamil included, plus javascript, python and go modes that switch to a monospace font and give an xp multiplier for being harder. sign in with github and your progress syncs through appwrite, so your stats follow you between devices.</p>
+                  </details>
+                  <div class="card-foot">
+                    <span class="stack">javascript · chart.js · appwrite</span>
+                    <a class="card-link" href="https://typo.neonxsl.dev" target="_blank" rel="noopener">typo.neonxsl.dev<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+                  </div>
+                </li>
+                <li class="card glow" data-p="space-tab">
+                  <span class="status">live</span>
+                  <h3>space tab</h3>
+                  <p>a new tab page that's actually worth looking at. every morning it pulls a fresh astronomy picture from nasa, so opening a tab usually means a nebula, a launch, or a planet you weren't expecting.</p>
+                  <details class="more">
+                    <summary>more</summary>
+                    <p>underneath it's deliberately plain: google search wired straight in, a few themes to match your browser, and aggressive caching so the image never gets in the way of whatever you opened the tab for. i use it dozens of times a day, which makes every rough edge impossible to ignore.</p>
+                  </details>
+                  <div class="card-foot">
+                    <span class="stack">javascript · css · nasa api</span>
+                    <a class="card-link" href="https://space.neonxsl.dev" target="_blank" rel="noopener">space.neonxsl.dev<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+                  </div>
+                </li>
+                <li class="card glow" data-p="sapphire">
+                  <span class="status">live</span>
+                  <h3>sapphire</h3>
+                  <p>a grade tracker made for nsw students. add your marks and it does the rest: weighted subject averages, upcoming exams, and your sentral timetable in the same place, so you're not checking three apps to work out where you're meant to be.</p>
+                  <details class="more">
+                    <summary>more</summary>
+                    <p>the maths was easy, the interface wasn't. school data is messy and the people using it are stressed and on their phones between periods, so everything important had to be visible without a single tap. it taught me more about designing for real, impatient people than anything else i've made.</p>
+                  </details>
+                  <div class="card-foot">
+                    <span class="stack">typescript · react · mongodb</span>
+                    <a class="card-link" href="https://sapphire.neonxsl.dev" target="_blank" rel="noopener">sapphire.neonxsl.dev<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+                  </div>
+                </li>
+                <li class="card glow" data-p="quartz">
+                  <span class="status">open source</span>
+                  <h3>quartz</h3>
+                  <p>a paper plugin that gives 1.21.11 minecraft servers real-time metrics. tick rate, memory, entity and chunk counts: the numbers you want when the server starts stuttering and everyone in chat is asking why.</p>
+                  <details class="more">
+                    <summary>more</summary>
+                    <p>a monitor that costs performance is worse than no monitor, so collection runs light and stays off the main thread wherever it can. it started as a debugging aid for a server i ran with friends, then turned out to be useful to other people too.</p>
+                  </details>
+                  <div class="card-foot">
+                    <span class="stack">java · paper api · minecraft</span>
+                    <a class="card-link" href="https://github.com/neonxsl/quartz" target="_blank" rel="noopener">github.com/neonxsl/quartz<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+                  </div>
+                </li>
+                <li class="card card-end glow">
+                  <h3>and a pile of smaller stuff</h3>
+                  <p>plugins, bots, scripts and experiments that never got their own card.</p>
+                  <a class="card-link" href="https://github.com/neonxsl" target="_blank" rel="noopener">github.com/neonxsl<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+                </li>
+              </ol>
+            </div>
+
+            <div class="container hs-foot" aria-hidden="true">
+              <div class="hs-progress"><span id="hs-bar"></span></div>
+              <span class="hs-hint">keep scrolling</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ==================== about ==================== -->
-      <section class="section" id="about">
+      <section class="section" id="about" aria-labelledby="about-title">
         <div class="container">
-          <div class="section-head reveal">
-            <span class="section-index">01</span>
-            <h2>about me</h2>
-            <span class="section-rule" aria-hidden="true"></span>
+          <div class="section-head">
+            <h2 id="about-title">about</h2>
+            <p class="section-intro">the short version: i build things i want to exist, and i look up a lot.</p>
           </div>
 
           <div class="about-grid">
-            <div class="about-text">
-              <p class="reveal lead">
-                i'm a software engineer and web developer based in sydney, australia. i started
-                out writing html in a text editor because i wanted a corner of the internet that
-                was mine, and somewhere along the line the tinkering turned into the thing i do
-                most days.
+            <div class="about-text stagger">
+              <p class="lead lit">
+                i write code in sydney, mostly for the web, and mostly because i want something to
+                exist and nobody's made it <em>quite</em> the way i'd like.
               </p>
-              <p class="reveal">
-                most of my work lives on the web. i like building interfaces from scratch: laying
-                out a page, getting the type right, making sure it still holds together on a phone
-                with a bad connection. i care a lot about the parts nobody is supposed to notice,
-                like how quickly a page paints, whether the layout shifts while it loads, and
-                whether the thing you clicked responds immediately or half a second later. good
-                software feels quiet, and quiet takes a surprising amount of work.
+              <p>
+                it started with html in a text editor because i wanted a bit of the internet that
+                was mine. now it's most of what i do. i like building pages from scratch, getting
+                the type right, and making sure it still works on a phone with one bar of signal.
+                the bits nobody notices are my favourite part: nothing jumping around while it
+                loads, buttons that respond straight away. good software is quiet, and quiet takes
+                way more work than you'd think.
               </p>
-              <p class="reveal">
-                outside the browser i write python and java, and i've been spending more time in
-                swift lately. almost everything i build starts as a problem i personally have. a
-                grade tracker because keeping marks across six subjects in a notes app was
-                miserable. a minecraft plugin because i wanted to actually see what my server was
-                doing instead of guessing. that's usually the best brief you can get: build the
-                thing you keep wishing existed.
+              <p>
+                outside the browser i write python and java, and i've been doing more swift lately.
+                pretty much everything starts as a problem i have. sapphire exists because tracking
+                marks for six subjects in a notes app was miserable. quartz exists because i wanted
+                to actually see what my minecraft server was doing instead of guessing.
               </p>
-              <blockquote class="reveal">
+              <blockquote class="lit">
                 i'd rather ship one small thing that works properly than five that almost do.
               </blockquote>
-              <p class="reveal">
-                when i'm not coding i'm reading about spaceflight, following launch windows i have
-                no business being invested in, or outside with a pair of binoculars trying to find
-                something faint. it's a decent counterweight to a job where everything happens on
-                a screen, and a reminder that the interesting problems are much, much bigger than
-                the ones in my editor.
+              <p>
+                when i'm not coding i'm reading about spaceflight, following launches i have no
+                business caring this much about, or outside with binoculars trying to find
+                something faint. hence the sky up there.
               </p>
             </div>
 
-            <aside class="facts reveal">
-              <dl>
-                <div class="fact">
-                  <dt>based in</dt>
-                  <dd>sydney, australia<span class="fact-sub">gmt+10</span></dd>
-                </div>
-                <div class="fact">
-                  <dt>focus</dt>
-                  <dd>frontend, web tooling<span class="fact-sub">and anything adjacent</span></dd>
-                </div>
-                <div class="fact">
-                  <dt>writing</dt>
-                  <dd>typescript, python, java</dd>
-                </div>
-                <div class="fact">
-                  <dt>status</dt>
-                  <dd>not taking freelance<span class="fact-sub">open to collabs and chats</span></dd>
-                </div>
-                <div class="fact">
-                  <dt>off-screen</dt>
-                  <dd>astronomy, music, coffee</dd>
-                </div>
+            <aside class="facts glow-group" aria-label="quick facts">
+              <dl class="glow">
+                <div class="fact"><dt>based in</dt><dd>sydney, australia<span>aest / aedt</span></dd></div>
+                <div class="fact"><dt>mostly</dt><dd>frontend and web tooling<span>and anything next to it</span></dd></div>
+                <div class="fact"><dt>writing</dt><dd>typescript, python, java</dd></div>
+                <div class="fact"><dt>status</dt><dd>not taking freelance<span>happy to chat or collab</span></dd></div>
+                <div class="fact"><dt>off-screen</dt><dd>astronomy, music, coffee</dd></div>
               </dl>
             </aside>
           </div>
+
+          <h3 class="sub makes-title">what i end up making</h3>
+          <ul class="makes glow-group stagger">
+            <li class="glow">
+              <span class="makes-k">websites</span>
+              <p>built from scratch, no templates. semantic html, css you can read, javascript only where it earns it. works on a phone, works with a keyboard.</p>
+            </li>
+            <li class="glow">
+              <span class="makes-k">tools</span>
+              <p>small programs for one annoying problem. trackers, scripts, apis and data plumbing, plus some swift experiments.</p>
+            </li>
+            <li class="glow">
+              <span class="makes-k">tinkering</span>
+              <p>minecraft plugins, servers, monitoring, self-hosting, and breaking things on purpose to see how they work.</p>
+            </li>
+          </ul>
         </div>
       </section>
-
-      <div class="divider" aria-hidden="true"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
-
-      <!-- ==================== what i do ==================== -->
-      <section class="section" id="work">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="section-index">02</span>
-            <h2>what i do</h2>
-            <span class="section-rule" aria-hidden="true"></span>
-          </div>
-
-          <p class="section-intro reveal">
-            three overlapping things, really. they all end up feeding each other: a plugin
-            teaches me something about performance, and that shows up in a website two months
-            later.
-          </p>
-
-          <div class="disciplines">
-            <article class="discipline reveal">
-              <span class="discipline-num">i</span>
-              <div class="discipline-body">
-                <h3>web development</h3>
-                <p>
-                  websites and interfaces built from the ground up, without reaching for a
-                  template. i write semantic markup, keep the css readable, and add javascript
-                  only where it earns its place. everything is responsive by default, keyboard
-                  accessible, and light enough to load properly on mobile data.
-                </p>
-                <ul class="discipline-list">
-                  <li>marketing and personal sites</li>
-                  <li>dashboards and web apps</li>
-                  <li>design systems, layout and type</li>
-                  <li>performance and accessibility passes</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="discipline reveal">
-              <span class="discipline-num">ii</span>
-              <div class="discipline-body">
-                <h3>software and tools</h3>
-                <p>
-                  small programs that solve a specific, annoying problem. usually that means a
-                  clear data model, a boring interface, and no features i can't justify. i'd
-                  rather spend the time on the two screens people actually use every day than
-                  build ten they'll open once.
-                </p>
-                <ul class="discipline-list">
-                  <li>internal tools and trackers</li>
-                  <li>scripts and automation</li>
-                  <li>apis and data plumbing</li>
-                  <li>native experiments in swift</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="discipline reveal">
-              <span class="discipline-num">iii</span>
-              <div class="discipline-body">
-                <h3>systems and tinkering</h3>
-                <p>
-                  the category that keeps me curious. plugins, servers, monitoring, and the
-                  occasional weekend spent reading documentation for something i don't strictly
-                  need. this is where i learn the things that make the other two categories
-                  better, like how systems actually behave once they're under load.
-                </p>
-                <ul class="discipline-list">
-                  <li>minecraft and paper plugins</li>
-                  <li>metrics and monitoring</li>
-                  <li>self-hosting and deployment</li>
-                  <li>breaking things on purpose</li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider" aria-hidden="true"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
 
       <!-- ==================== toolkit ==================== -->
-      <section class="section" id="toolkit">
+      <section class="section" id="toolkit" aria-labelledby="toolkit-title">
         <div class="container">
-          <div class="section-head reveal">
-            <span class="section-index">03</span>
-            <h2>toolkit</h2>
-            <span class="section-rule" aria-hidden="true"></span>
+          <div class="section-head">
+            <h2 id="toolkit-title">toolkit</h2>
+            <p class="section-intro">
+              what i reach for most. i'm not precious about any of it, the problem picks the stack.
+            </p>
           </div>
 
-          <p class="section-intro reveal">
-            the languages i reach for most, and the tools that surround them. i'm not precious
-            about any of it. the stack should follow the problem, not the other way around.
-          </p>
-
-          <h4 class="group-label reveal">languages</h4>
-          <div class="tool-grid">
-            <div class="tool reveal"><i class="devicon-html5-plain" aria-hidden="true"></i><span>html</span></div>
-            <div class="tool reveal"><i class="devicon-css3-plain" aria-hidden="true"></i><span>css</span></div>
-            <div class="tool reveal"><i class="devicon-javascript-plain" aria-hidden="true"></i><span>javascript</span></div>
-            <div class="tool reveal"><i class="devicon-typescript-plain" aria-hidden="true"></i><span>typescript</span></div>
-            <div class="tool reveal"><i class="devicon-python-plain" aria-hidden="true"></i><span>python</span></div>
-            <div class="tool reveal"><i class="devicon-java-plain" aria-hidden="true"></i><span>java</span></div>
-            <div class="tool reveal"><i class="devicon-swift-plain" aria-hidden="true"></i><span>swift</span></div>
+          <div class="tool-row">
+            <h3 class="sub">languages</h3>
+            <ul class="tool-grid glow-group stagger">
+              <li class="tool glow"><i class="devicon-html5-plain" aria-hidden="true"></i><span>html</span></li>
+              <li class="tool glow"><i class="devicon-css3-plain" aria-hidden="true"></i><span>css</span></li>
+              <li class="tool glow"><i class="devicon-javascript-plain" aria-hidden="true"></i><span>javascript</span></li>
+              <li class="tool glow"><i class="devicon-typescript-plain" aria-hidden="true"></i><span>typescript</span></li>
+              <li class="tool glow"><i class="devicon-python-plain" aria-hidden="true"></i><span>python</span></li>
+              <li class="tool glow"><i class="devicon-java-plain" aria-hidden="true"></i><span>java</span></li>
+              <li class="tool glow"><i class="devicon-swift-plain" aria-hidden="true"></i><span>swift</span></li>
+            </ul>
           </div>
 
-          <h4 class="group-label reveal">tools and platforms</h4>
-          <div class="tool-grid">
-            <div class="tool reveal"><i class="devicon-react-original" aria-hidden="true"></i><span>react</span></div>
-            <div class="tool reveal"><i class="devicon-nodejs-plain" aria-hidden="true"></i><span>node</span></div>
-            <div class="tool reveal"><i class="devicon-git-plain" aria-hidden="true"></i><span>git</span></div>
-            <div class="tool reveal"><i class="devicon-github-original" aria-hidden="true"></i><span>github</span></div>
-            <div class="tool reveal"><i class="devicon-vscode-plain" aria-hidden="true"></i><span>vs code</span></div>
-            <div class="tool reveal"><i class="devicon-figma-plain" aria-hidden="true"></i><span>figma</span></div>
-            <div class="tool reveal"><i class="devicon-linux-plain" aria-hidden="true"></i><span>linux</span></div>
+          <div class="tool-row">
+            <h3 class="sub">tools and platforms</h3>
+            <ul class="tool-grid glow-group stagger">
+              <li class="tool glow"><i class="devicon-react-original" aria-hidden="true"></i><span>react</span></li>
+              <li class="tool glow"><i class="devicon-nodejs-plain" aria-hidden="true"></i><span>node</span></li>
+              <li class="tool glow"><i class="devicon-git-plain" aria-hidden="true"></i><span>git</span></li>
+              <li class="tool glow"><i class="devicon-github-original" aria-hidden="true"></i><span>github</span></li>
+              <li class="tool glow"><i class="devicon-vscode-plain" aria-hidden="true"></i><span>vs code</span></li>
+              <li class="tool glow"><i class="devicon-figma-plain" aria-hidden="true"></i><span>figma</span></li>
+              <li class="tool glow"><i class="devicon-linux-plain" aria-hidden="true"></i><span>linux</span></li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <div class="divider" aria-hidden="true"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
-
-      <!-- ==================== projects ==================== -->
-      <section class="section" id="projects">
+      <!-- ==================== lately ==================== -->
+      <section class="section" id="lately" aria-labelledby="lately-title">
         <div class="container">
-          <div class="section-head reveal">
-            <span class="section-index">04</span>
-            <h2>projects</h2>
-            <span class="section-rule" aria-hidden="true"></span>
+          <div class="section-head">
+            <h2 id="lately-title">lately</h2>
+            <p class="section-intro">what's taking up space in my head right now. updated november 2026.</p>
           </div>
 
-          <p class="section-intro reveal">
-            a few things i've built and still maintain. all of them started as something i
-            wanted for myself, which is probably why they're the ones that got finished.
-          </p>
-
-          <div class="projects">
-            <article class="project reveal">
-              <span class="project-index">01</span>
-              <div class="project-body">
-                <div class="project-top">
-                  <span class="project-icon"><i data-lucide="rocket" stroke-width="1.75"></i></span>
-                  <h3>space tab</h3>
-                  <span class="chip">live</span>
-                </div>
-                <p>
-                  a new tab page that replaces the blank slate with something worth looking at.
-                  every morning it pulls a fresh astronomy background from nasa, so opening a tab
-                  usually means a nebula, a launch, or a shot of a planet you weren't expecting.
-                </p>
-                <p class="muted-text">
-                  underneath it's deliberately plain: google search wired straight into the page,
-                  a handful of themes so it matches whatever browser setup you're running, and
-                  aggressive caching so the image never blocks the thing you actually opened the
-                  tab to do. it's the project i use the most, dozens of times a day, which makes
-                  every rough edge impossible to ignore.
-                </p>
-                <ul class="tags">
-                  <li>javascript</li><li>css</li><li>nasa api</li>
-                </ul>
-                <a class="project-link" href="https://space.neonxsl.dev" target="_blank" rel="noopener">
-                  visit site <i data-lucide="arrow-up-right" stroke-width="2"></i>
-                </a>
-              </div>
-            </article>
-
-            <article class="project reveal">
-              <span class="project-index">02</span>
-              <div class="project-body">
-                <div class="project-top">
-                  <span class="project-icon"><i data-lucide="gem" stroke-width="1.75"></i></span>
-                  <h3>sapphire</h3>
-                  <span class="chip">live</span>
-                </div>
-                <p>
-                  a grade tracker built specifically for nsw students. you add your marks, and it
-                  handles the rest: weighted subject averages, upcoming exams, and your sentral
-                  timetable pulled into the same place so you're not checking three apps to work
-                  out where you're supposed to be.
-                </p>
-                <p class="muted-text">
-                  the hard part wasn't the maths, it was the interface. school data is messy and
-                  the people using it are stressed and on their phones between periods, so
-                  everything important had to be visible without a single tap. it's the project
-                  that taught me the most about designing for a real, impatient audience rather
-                  than an imaginary one.
-                </p>
-                <ul class="tags">
-                  <li>typescript</li><li>react</li><li>mongodb</li>
-                </ul>
-                <a class="project-link" href="https://sapphire.neonxsl.dev" target="_blank" rel="noopener">
-                  visit site <i data-lucide="arrow-up-right" stroke-width="2"></i>
-                </a>
-              </div>
-            </article>
-
-            <article class="project reveal">
-              <span class="project-index">03</span>
-              <div class="project-body">
-                <div class="project-top">
-                  <span class="project-icon"><i data-lucide="box" stroke-width="1.75"></i></span>
-                  <h3>quartz</h3>
-                  <span class="chip">open source</span>
-                </div>
-                <p>
-                  a paper plugin that gives 1.21.11 minecraft servers real-time metrics. tick
-                  rate, memory, entity and chunk counts: the numbers you need when the server
-                  starts stuttering and everyone in chat is asking why.
-                </p>
-                <p class="muted-text">
-                  writing it meant being careful about the thing i was measuring. a monitor that
-                  costs performance is worse than no monitor at all, so collection runs light and
-                  stays off the main thread wherever it can. it started as a debugging aid for a
-                  server i ran with friends, then turned out to be useful to other people too.
-                </p>
-                <ul class="tags">
-                  <li>java</li><li>paper api</li><li>minecraft</li>
-                </ul>
-                <a class="project-link" href="https://github.com/neonxsl/quartz" target="_blank" rel="noopener">
-                  visit github <i data-lucide="arrow-up-right" stroke-width="2"></i>
-                </a>
-              </div>
-            </article>
-          </div>
+          <ul class="nows glow-group stagger">
+            <li class="now glow">
+              <span class="now-k">building</span>
+              <p>keyboard-only things. echo and typo both ditch the mouse, and echo bans the tab key on top of that.</p>
+            </li>
+            <li class="now glow">
+              <span class="now-k">learning</span>
+              <p>swift and swiftui properly, instead of the copy-paste-and-hope approach i took the first time.</p>
+            </li>
+            <li class="now glow">
+              <span class="now-k">thinking about</span>
+              <p>how much javascript a website actually needs. usually less than i started with.</p>
+            </li>
+            <li class="now glow">
+              <span class="now-k">looking up</span>
+              <p>reading about deep space missions, and getting better at finding things in the sky without an app telling me where to point.</p>
+            </li>
+          </ul>
         </div>
       </section>
-
-      <div class="divider" aria-hidden="true"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
-
-      <!-- ==================== currently ==================== -->
-      <section class="section" id="now">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="section-index">05</span>
-            <h2>currently</h2>
-            <span class="section-rule" aria-hidden="true"></span>
-          </div>
-
-          <p class="section-intro reveal">
-            a snapshot of what's taking up space in my head right now. it changes often.
-          </p>
-
-          <div class="now-list">
-            <div class="now-item reveal">
-              <span class="now-label">building</span>
-              <p>
-                more of sapphire. better exam handling, and an offline mode so it still works
-                when the school wifi inevitably doesn't.
-              </p>
-            </div>
-            <div class="now-item reveal">
-              <span class="now-label">learning</span>
-              <p>
-                swift and swiftui properly, instead of the copy-paste-and-hope approach i took
-                the first time around.
-              </p>
-            </div>
-            <div class="now-item reveal">
-              <span class="now-label">thinking about</span>
-              <p>
-                how much javascript a website actually needs. usually the answer is less than
-                the one i started with.
-              </p>
-            </div>
-            <div class="now-item reveal">
-              <span class="now-label">elsewhere</span>
-              <p>
-                reading about deep space missions, and slowly getting better at finding things in
-                the sky without an app telling me where to point.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider" aria-hidden="true"><span class="rule"></span><span class="diamond"></span><span class="rule"></span></div>
 
       <!-- ==================== contact ==================== -->
-      <section class="section contact" id="contact">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="section-index">06</span>
-            <h2>get in touch</h2>
-            <span class="section-rule" aria-hidden="true"></span>
-          </div>
-
-          <div class="contact-inner">
-            <p class="contact-lead reveal">
-              got something you want to talk about<span class="accent">?</span>
-            </p>
-            <p class="reveal contact-copy">
-              i'm not taking freelance work at the moment, but my inbox is always open.
-              collaborations, open source, questions about something i've built, or a
-              "would this even be possible" conversation are all welcome. i read everything,
-              and i'll usually get back to you within a day or two.
-            </p>
-            <div class="contact-links reveal">
-              <a class="btn btn-primary" href="mailto:neon@neonxsl.dev">
-                <i data-lucide="mail" stroke-width="2"></i> neon@neonxsl.dev
-              </a>
-              <a class="btn" href="https://github.com/neonxsl" target="_blank" rel="noopener">
-                <i data-lucide="github" stroke-width="2"></i> github
-              </a>
-            </div>
-          </div>
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <canvas class="trails" id="trails" aria-hidden="true"></canvas>
+        <div class="container contact-inner stagger">
+          <h2 id="contact-title">say hi</h2>
+          <p class="contact-copy">
+            i'm not taking freelance right now, but my inbox is open. collabs, open source,
+            questions about something i made, or a "would this even be possible" chat are all
+            good. i read everything and usually reply within a day or two.
+          </p>
+          <a class="mail" href="mailto:neon@neonxsl.dev">neon@neonxsl.dev</a>
+          <p class="elsewhere">
+            or find me on <a href="https://github.com/neonxsl" target="_blank" rel="noopener">github</a>
+          </p>
         </div>
+        <p class="trails-note" aria-hidden="true">star trails around the south celestial pole</p>
       </section>
     </main>
 
     <footer>
       <div class="container footer-inner">
-        <span class="footer-mark">neonxsl<span class="logo-dot" aria-hidden="true"></span></span>
-        <span class="footer-note">built from scratch with html, css and a little javascript</span>
-        <span class="footer-note">sydney &middot; <span id="year">2026</span></span>
+        <span>neonxsl</span>
+        <span>made by hand with html, css and a bit of javascript</span>
+        <span>sydney, <span id="year">2026</span></span>
       </div>
     </footer>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
     <script src="./script.js" defer></script>
     <script type="module">
       import LocomotiveScroll from 'https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/+esm';
@@ -462,7 +341,7 @@
             wheelMultiplier: 0.95,
             smoothWheel: true,
             syncTouch: false,
-            anchors: false
+            anchors: true
           }
         });
       }
